@@ -1,9 +1,48 @@
-.navbar{
+.wrapper {
+    /* First define the column count  */
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* 2nd, define rows  */
+    grid-auto-rows: minmax(100px,auto);
+    /* column gap  */
+    grid-column-gap: 2rem;
+
+    grid-template-areas: 
+        "h h h h h h h h h h h h"
+        "m m m m m m m m m m m m"
+        "f f f f f f f f f f f f";
+}
+
+.header {
+    /* create named grid area  */
+    grid-area: h;
+    
+    
+}
+.main{
+    grid-area: m;
+    
+    
+
+}
+.footer{
+    grid-area: f;
+   
+    
+}
+.logo{
+    grid-area: lo;
+
+}
+
+
+
+ .navbar{
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: white;
-}
+    
+} 
 
 
 .navbar ul{
@@ -16,10 +55,7 @@
 }
 /*Centering logo  in the middle of the page*/
 .navbar li.logo{
-    width: 150px;
-    height: 75px;
-    margin: auto;
-    padding: 5px;
+
     background-color: brown;
     
     
