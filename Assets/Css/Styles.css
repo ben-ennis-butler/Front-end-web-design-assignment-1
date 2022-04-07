@@ -1,29 +1,14 @@
-/*
-body {
-    background: #9c0;
-}
-*/
-
 .wrapper {
-
-    /*
-    width: 80%;
-margin: 0 auto;
-*/
-
     /* First define the column count  */
     display: grid;
-
     grid-template-columns: repeat(12, 1fr);
-
     /* 2nd, define rows  */
     grid-auto-rows: minmax(100px, auto);
-
     /* column gap  */
     grid-column-gap: 2rem;
 
-
-    grid-template-areas: "ln ln ln ln l l l l rn rn rn rn"
+    grid-template-areas:
+        "ln ln ln ln l l l l rn rn rn rn"
         "m m m m m m m m m m m m"
         "f f f f f f f f f f f f";
 }
@@ -31,10 +16,6 @@ margin: 0 auto;
 .leftnav {
     /* create named grid area  */
     grid-area: ln;
-}
-
-.logo {
-    grid-area: l;
 }
 
 .rightnav {
@@ -49,6 +30,9 @@ margin: 0 auto;
     grid-area: f;
 }
 
+.logo {
+    grid-area: l;
+}
 
 
 
@@ -67,8 +51,9 @@ margin: 0 auto;
 /*Centering logo  in the middle of the page*/
 .navbar li.logo {
     background-color: brown;
-}
 
+
+}
 
 .leftnav li {
     float: right;
@@ -103,30 +88,73 @@ margin: 0 auto;
     color: grey;
 }
 
+.IndexFirstBlock {
 
+    text-align: center;
+    padding: 10px;
+    margin-top: 180px;
+}
+
+.IndexFirstBlock img {
+    float: none;
+    max-width: 100%;
+    padding: 10px;
+
+
+}
+
+.IndexFirstBlockText {
+    float: left;
+    display: block;
+    max-width: 600px;
+    min-width: 400px;
+
+}
 
 .main {
     display: grid;
-
-    /*    grid-template-columns: 2;*/
     grid-template-columns: repeat(12, 1fr);
-
     /* 2nd, define rows  */
-    /*    grid-auto-rows: minmax(100px, auto);*/
-
+    grid-auto-rows: minmax(100px, auto);
     /* column gap  */
     grid-column-gap: 2rem;
 
     grid-template-areas:
-        "c1 c1 c1 c1 c1 c1 c2 c2 c2 c2 c2 c2";
+        "c1 c1 c1 c1 c1 c1 c2 c2 c2 c2 c2 c2"
 }
+
+.main.home {
+    background: red;
+}
+
+.main.news {
+    background: pink;
+
+    grid-template-areas:
+        "c2 c2 c2 c2 c2 c2 c2 c2 c2 c2 c2 c2"
+        "c1 c1 c1 c1 c1 c1 c3 c3 c3 c3 c3 c3 "
+}
+
+@media (min-width: 765px) {
+    .main.news {
+
+
+        grid-template-areas:
+            "c2 c2 c2 c2 c2 c2 c2 c2 c2 c2 c2 c2"
+            "c1 c1 c1 c1 c1 c1 c1 c1 c1 c1 c1 c1"
+            "c3 c3 c3 c3 c3 c3 c3 c3 c3 c3 c3 c3"
+    }
+}
+
 
 .col1 {
     grid-area: c1;
-    background: #cccccc;
 }
 
 .col2 {
     grid-area: c2;
-    background: #ccc
+}
+
+.col3 {
+    grid-area: c3;
 }
