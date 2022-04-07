@@ -1,14 +1,29 @@
+/*
+body {
+    background: #9c0;
+}
+*/
+
 .wrapper {
+
+    /*
+    width: 80%;
+margin: 0 auto;
+*/
+
     /* First define the column count  */
     display: grid;
+
     grid-template-columns: repeat(12, 1fr);
+
     /* 2nd, define rows  */
-    grid-auto-rows: minmax(100px,auto);
+    grid-auto-rows: minmax(100px, auto);
+
     /* column gap  */
     grid-column-gap: 2rem;
 
-    grid-template-areas: 
-        "ln ln ln ln l l l l rn rn rn rn"
+
+    grid-template-areas: "ln ln ln ln l l l l rn rn rn rn"
         "m m m m m m m m m m m m"
         "f f f f f f f f f f f f";
 }
@@ -17,64 +32,67 @@
     /* create named grid area  */
     grid-area: ln;
 }
-.rightnav{
-    grid-area: rn;
-}
-.main{
-    grid-area: m;
-}  
-.footer{
-    grid-area: f;  
-}
-.logo{
+
+.logo {
     grid-area: l;
 }
 
+.rightnav {
+    grid-area: rn;
+}
+
+.main {
+    grid-area: m;
+}
+
+.footer {
+    grid-area: f;
+}
 
 
- .navbar{
-
-    
-} 
 
 
-.navbar ul{
+.navbar {}
+
+
+.navbar ul {
     list-style-type: none;
     margin: 10px;
     padding: 20px;
     overflow: hidden;
-    
-    
-}
-/*Centering logo  in the middle of the page*/
-.navbar li.logo{
-    background-color: brown;
-    
-    
-}
-.leftnav li{ 
-    float: right;
-    padding: 30px;   
+
+
 }
 
-.rightnav li{
+/*Centering logo  in the middle of the page*/
+.navbar li.logo {
+    background-color: brown;
+}
+
+
+.leftnav li {
+    float: right;
+    padding: 30px;
+}
+
+.rightnav li {
     float: left;
-    padding: 30px; 
+    padding: 30px;
 }
 
 .navbar li a {
     text-decoration: none;
     font-family: 'Sansita Swashed', cursive;
     display: block;
-    
-    }
+
+}
 
 .navbar li a:link {
-    color:black;
+    color: black;
 }
 
 .navbar li a:visited {
-    color:black;
+    color: black;
 }
 
 .navbar li a:hover {
@@ -82,28 +100,33 @@
 }
 
 .navbar li a:active {
-    color:grey;
+    color: grey;
 }
 
-.IndexFirstBlock{
 
-    text-align: center;
-    padding: 10px;
-    margin-top: 180px;
+
+.main {
+    display: grid;
+
+    /*    grid-template-columns: 2;*/
+    grid-template-columns: repeat(12, 1fr);
+
+    /* 2nd, define rows  */
+    /*    grid-auto-rows: minmax(100px, auto);*/
+
+    /* column gap  */
+    grid-column-gap: 2rem;
+
+    grid-template-areas:
+        "c1 c1 c1 c1 c1 c1 c2 c2 c2 c2 c2 c2";
 }
 
-.IndexFirstBlock img{
-    float: none;
-    max-width: 100%;
-    padding: 10px;
-    
-
+.col1 {
+    grid-area: c1;
+    background: #cccccc;
 }
 
-.IndexFirstBlockText{
-    float: left;
-    display: block;
-    max-width: 600px;
-    min-width: 400px;
-
+.col2 {
+    grid-area: c2;
+    background: #ccc
 }
